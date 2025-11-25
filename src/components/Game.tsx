@@ -11,6 +11,11 @@ export const Game = () => {
   };
 
   const { state, makeMove, resetGame, newGame } = useGame(mode, variant, players);
+  const handleCellClick = (index: number) => {
+    if (mode === "ai" && state.currentPlayer === 1) return;
+    makeMove(index);
+  };
+
 
   return (
     <div>
@@ -25,21 +30,20 @@ export const Game = () => {
             : `${state.players.find(p => p.symbol === state.winner)?.name} gagne !`}
         </p>
       )}
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 100px)', gap: '5px' }}>
+        <div className="grid-board" style={{ gridTemplateColumns: 'repeat(3, 100px)' }}>
         {state.board.map((cell, i) => (
-          <button 
-            key={i}
-            onClick={() => makeMove(i)}
+        <button
+          key={i}
+          className={`grid-cell ${cell === "X" ? "x" : cell === "O" ? "o" : ""}`}
+          onClick={() => handleCellClick(i)}
             disabled={!!cell || !!state.winner}
-            style={{ 
-              width: '100px', 
-              height: '100px',
-              opacity: variant === 'three-moves' && state.moveHistory[0] === i ? 0.5 : 1
-            }}
-          >
-            {cell}
-          </button>
+          style={{
+            opacity: variant === 'three-moves' && state.moveHistory[0] === i ? 0.5 : 1
+          }}
+        >
+        {cell}
+        </button>
+
         ))}
       </div>
 
@@ -47,10 +51,11 @@ export const Game = () => {
         <p>{state.players[0].name}: {state.players[0].wins} victoires</p>
         <p>{state.players[1].name}: {state.players[1].wins} victoires</p>
       </div>
-
-      <button onClick={resetGame}>Rejouer</button>
-      <button onClick={newGame}>Nouvelle partie</button>
-      <button onClick={() => navigate('/')}>Accueil</button>
+      <div className='Btns'>
+        <button className="GameButton" onClick={resetGame}>Rejouer</button>
+        <button className="GameButton" onClick={newGame}>Nouvelle partie</button>
+        <button className="GameButton" onClick={() => navigate('/')}>Accueil</button>
+      </div>
     </div>
   );
 };

@@ -96,6 +96,7 @@ export const useGame = (mode: GameMode, variant: Variant, playerNames: [string, 
         winner: winner || (isDraw ? 'draw' : null),
         moveHistory: newMoveHistory
       };
+      
 
       
       if (winner) {
@@ -103,7 +104,7 @@ export const useGame = (mode: GameMode, variant: Variant, playerNames: [string, 
         if (winnerIndex >= 0) {
           const playersCopy = [...newState.players];
           playersCopy[winnerIndex] = { ...playersCopy[winnerIndex], wins: playersCopy[winnerIndex].wins + 1 };
-          newState.players = playersCopy;
+          newState.players = [playersCopy[0], playersCopy[1]];
           if (mode === 'ai') {
             const humanIndex = 0; 
             if (playersCopy[humanIndex].symbol === winner) {

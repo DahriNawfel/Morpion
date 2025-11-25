@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer>
-      <p>Morpion React - 2025</p>
+      <p>Morpion morpionneux fais a l'aube de 2026</p>
     </footer>
   );
 };
