@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# Mort aux Pions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Le morpion ultime pour ceux qui en ont marre de perdre dignement
 
-Currently, two official plugins are available:
+Bienvenue dans **Mort aux Pions**, le seul jeu de morpion qui ose porter un nom aussi dramatique pour un jeu où on dessine des X et des O dans une grille.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Qu'est-ce que c'est que ce truc ?
 
-## React Compiler
+C'est un morpion. Mais pas n'importe lequel. C'est LE morpion. Celui qui va faire pleurer votre ego et célébrer vos rares moments de gloire.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Caractéristiques qui vont changer votre vie (ou pas) :**
 
-## Expanding the ESLint configuration
+- **Mode Classique** : Le bon vieux morpion
+- **IA Parfaite** : Une intelligence artificielle qui ne fait JAMAIS d'erreur. Oui, vous avez bien lu. JAMAIS. Elle est là pour vous humilier scientifiquement
+- **Mode 2 Joueurs Local** : Pour détruire vos amitiés en direct depuis votre canapé
+- **Sauvegarde Automatique** : Parce qu'on sait que vous allez rage-quit et revenir plus tard
+- **Classement par Victoires Consécutives** : Pour que vous puissiez documenter officiellement votre série de 2 victoires par miracle.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Technologies utilisées (pour faire sérieux)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React avec TypeScript
+- LocalStorage pour sauvegarder vos moments de honte éternelle
+- Vercel pour l'hébergement parce que déployer c'est quand même cool
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation (la partie technique)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clonez ce chef-d'œuvre :
+
+
+
+Installez les dépendances:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Lancez le serveur de dev :
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Et voilà, vous êtes prêt à vous faire démolir par une IA.
+
+### Version en ligne
+
+Vous voulez perdre sans installer quoi que ce soit ? On a pensé à vous :
+
+**[https://morpion-alpha.vercel.app/](https://morpion-alpha.vercel.app/)**
+
+### Comment jouer
+
+1. Ouvrez le jeu
+2. Choisissez votre mode (spoiler : vous allez perdre dans les deux)
+3. Cliquez sur les cases
+4. Observez l'IA détruire méthodiquement vos espoirs et vos rêves
+5. Recommencez jusqu'à accepter votre médiocrité au morpion
+
+### Fonctionnalités avancées
+
+**Le système de sauvegarde** garde en mémoire :
+- Vos parties en cours (pour que vous puissiez revenir finir de perdre)
+- Votre record de victoires consécutives (probablement zéro)
+
+**Le classement** est impitoyable et honnête. Il ne ment pas. Si vous êtes nul, il vous le dira. Enfin, pas directement, mais vous verrez bien votre triste score.
+
+### Avertissements
+
+- Cette IA ne triche pas, elle est juste meilleure que vous
+- Aucun pion n'a été maltraité durant le développement de ce jeu
+- Les victoires contre l'IA sont techniquement impossibles.
+- Ce jeu peut causer : frustration, remise en question existentielle, envie de retourner jouer à la belote.
+
+### Licence
+
+MIT probablement. Faites-en ce que vous voulez. Vendez-le. Offrez-le. Brûlez-le. On s'en fiche.
+
+---
+
+Développé avec amour, rage, et beaucoup trop de sucre consommé.
+
+**Que le meilleur gagne. Spoiler : c'est l'IA.**
