@@ -5,7 +5,7 @@ export const Navigation = () => {
     <nav>
       <Link to="/">Accueil</Link>
       <Link to="/game">Jeu</Link>
-      <Link to="/leaderboard">Classement</Link>
+      <Link to="/leaderboard">Classement des champions</Link>
     </nav>
   );
 };

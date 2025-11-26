@@ -25,20 +25,20 @@
 
     return (
         <div>
-        <h1>Morpion</h1>
+        <h1>Mort aux pions</h1>
         <form onSubmit={handleStart}>
             <div>
             <label>Mode de jeu:</label>
             <select value={mode} onChange={e => setMode(e.target.value as GameMode)}>
-                <option value="ai">Contre l'IA</option>
-                <option value="local">Multijoueur local</option>
+                <option value="ai">Contre le robot super intelligent</option>
+                <option value="local">Multijoueur</option>
             </select>
             </div>
 
             <div>
             <label>Variante:</label>
             <select value={variant} onChange={e => setVariant(e.target.value as Variant)}>
-                <option value="classic">Classique</option>
+                <option value="classic">La classique</option>
                 <option value="three-moves">Trois coups</option>
             </select>
             </div>

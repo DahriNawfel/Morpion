@@ -43,7 +43,7 @@ export const Game = () => {
 
   return (
     <div>
-      <h1>Morpion - {variant === 'classic' ? 'Classique' : 'Trois coups'}</h1>
+      <h1>Mort aux pions - {variant === 'classic' ? 'La classique' : 'Trois coups'}</h1>
 
       <p>Tour de : {state.players[state.currentPlayer].name}</p>
 

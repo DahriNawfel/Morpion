@@ -225,7 +225,7 @@ button:not([disabled]):not(.grid-cell):active {
 }
 
 ol {
-  list-style-position: inside;
+  list-style: none;
   background-color: #203741;
   padding: 1.5rem;
   border-radius: 12px;
@@ -242,10 +242,11 @@ ol li {
   border-left: 4px solid #36CDCA;
 }
 
-ol li:first-child {
-  border-left-color: #F6BC47;
-  color: #F6BC47;
+.top1 {
+  border-left-color: #F6BC47 !important;
+  color: #F6BC47 !important;
 }
+
 
 footer {
   background-color: #203741;
